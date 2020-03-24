@@ -1,0 +1,339 @@
+@import 'mixins';
+@import 'icons';
+@import '../../node_modules/sass-rem/_rem';
+
+/*COLORS*/
+$black: #000;
+$white: #FFF;
+$gray: #506C80;
+$gray2: #436680;
+$gray3: #81ACCC;
+$gray4: #5F5F5F;
+$gray5: #F7F7F7;
+$gray6: #E0E8EF;
+$principal: #54B6FF;
+$secundary: #0074CB;
+$third: #A1D6FF;
+$bor-gray: 1px solid #E0E8EF;
+$text-color: #5F5F5F;
+
+br{
+    clear: both;
+}
+
+body{
+    color: $text-color;
+    font-family: 'Lato', sans-serif;
+    background: $gray5;
+    font-size: rem(16px);
+    font-weight: 300;
+}
+
+a{
+    @include transition(.3s);
+}
+
+.hd-nav{
+    border-bottom: 1px solid $gray3;
+    min-height: 80px;
+    padding: 18px 0;
+}
+
+.img-logo{
+    display: none;
+    height: 34px;
+}
+/*MENU*/
+.top-menu{
+
+    .navbar-brand{
+        color: $principal;
+
+        .icon-log{
+            font-size: 34px;
+            float: left;
+        }
+        span{
+            font-size: 16px;
+            font-weight: 900;
+            letter-spacing: rem(0.6px);
+
+            @include xxs{
+                display: none;
+            }
+        }
+
+        @include xxs{
+            margin-right: 0;
+        }
+    }
+    
+    .mr-auto, .mx-auto {
+        margin-right: inherit!important;
+        margin-left: auto!important;
+    }
+    .navbar-toggler {
+        color: $secundary;
+        border-color: $secundary;
+    }
+    .nav-item{
+        color: $gray2;
+        font-weight: 400;
+        .nav-link{
+            color: $gray2;
+        }
+    }
+    .navbar{
+        padding: 0;
+    }
+    .show > .nav-link,
+    .active > .nav-link,
+    .nav-link.show,
+    .nav-link.active {
+      color: $principal !important;
+      font-weight: 700;
+    }
+    .form-inline{
+
+        @include s{
+            width: calc(100% - 220px);
+
+            .form-control{
+                width: calc(100% - 52px);
+                margin: 0 10px 0 0;
+            }
+        }
+
+        @include xxs{
+            width: calc(100% - 120px);
+        }
+    }
+    .btn-outline-success{
+        color: $principal;
+        border-color: $principal;
+
+        &:hover{
+            background: $principal;
+            color: $white;
+        }
+    }
+}
+/*FIN MENU*/
+h1{
+    font-size: rem(36px);
+    color: $gray2;
+    font-weight: 900;
+    text-align: center;
+
+    @include s{
+        font-size: rem(24px);
+    }
+}
+p{
+    color: $text-color;
+}
+
+/*HOME*/
+main{
+    padding: 20px 0;
+
+    p{
+        text-align: center;
+    }
+    .box-option{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 0 60px;
+        align-items: center;
+        max-width: 860px;
+        margin: 60px auto;
+
+        @include md{
+            grid-gap: 0 30px;
+        }
+        @include s{
+            margin: 30px auto;
+        }
+
+        a{
+            @include border-radius(20px);
+            width: 400px;
+            background: url(../images/img-hospedar.png) no-repeat;
+            background-position: bottom left;
+            background-color: #CAEBFE;
+            background-size: 100% auto;
+            display: block;
+            padding: 120px 0 0 180px;
+            height: 300px;
+            color: $text-color;
+            text-decoration: none;
+            @include transition(.6s);
+            box-sizing: border-box;
+
+            @include md{
+                width: 100%;
+                height: 230px;
+                padding: 100px 0 0 150px;
+            }
+
+            @include sm{
+                padding: 40px 0 0 80px;
+            }
+            @include s{
+                padding: 20px 0 160px 20px;
+                height: 100%;
+            }
+            @include xxs{
+                padding-bottom: 100px;
+            }
+
+            &:hover{
+                color: $secundary;
+                background-size: 110% auto !important;
+
+                h3{
+                    color: $secundary;
+                }
+            }
+
+            &:nth-child(2n){
+                background: url(../images/img-buscar.png) no-repeat;
+                background-color: $white;
+                background-position: bottom left;
+                background-size: 100% auto;
+                @include transition(.6s);
+            }
+
+            h3{
+                color: $gray;
+                font-weight: 900;
+                font-size: rem(36px);
+                line-height: 100%;
+
+                @include md{
+                    font-size: rem(24px);
+                }
+                @include iplus{
+                    font-size: rem(20px);
+                }
+                
+            }
+
+            .icon-next{
+                font-size: rem(16px);
+
+                @include s{
+                    font-size: rem(12px);
+                }
+            }
+
+            span{
+                line-height: 120%;
+                display: block;
+
+                @include md{
+                    font-size: rem(14px);
+                }
+                @include iplus{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.sec-home{
+    padding: 100px 0;
+
+    @include s{
+        padding: 50px 0;
+    }
+}
+.white{
+    background: $white;
+    
+    .img-sec{
+        grid-column: 2/2;
+        grid-row: 1/2;
+    }
+}
+.art-home{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 0 10px;
+    align-items: center;
+
+    @include sm{
+        display: block;
+    }
+    
+    .box-txt{
+        display: block;
+
+        .title{
+            font-size: rem(36px);
+            color: $gray;
+            font-weight: 900;
+
+            @include sm{
+                text-align: center;
+            }
+            
+            @include s{
+                font-size: rem(24px);
+            }
+        }
+        p{
+            font-size: rem(18px);
+
+            @include s{
+                font-size: rem(16px);
+                text-align: justify;
+            }
+        }
+
+        ul{
+            color: $principal;
+            padding: 0;
+            list-style: none;
+            margin: 10px 0 0;
+            text-align: left;
+
+            li{
+                font-size: rem(14px);
+                padding: 5px 0;
+
+                i{
+                    font-size: rem(16px);
+                    display: inline-block;
+                    margin: 0 5px 0 0;
+                }
+            }
+        }
+    }
+    .img-sec{
+        margin: 0 auto;
+
+        img{
+            display: block;
+            margin: 0 auto;
+            max-width: 338px;
+
+            @include s{
+                height: 200px;
+            }
+        }
+
+        @include sm{
+            margin-bottom: 20px;
+        }
+    }
+}
+/*FIN HOME*/
+
+footer{
+    background: $gray;
+    padding: 30px 0;
+    color: $white;
+    text-align: center;
+    font-weight: 400;
+}
