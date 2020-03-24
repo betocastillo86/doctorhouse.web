@@ -48,50 +48,61 @@
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">Mis solicitudes</a>
+						<span class="notifica"></span>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Iniciar sesión/Registro</a>
+					<li class="nav-login">
+						<span>Pedro Perez</span>
+						<a href="#">Cerrar sesión</a>
 					</li>
 				</ul>
 				</div>
 			</nav>
 		</div>
 	</header>
-	<main class="container">
-		<h1>Ayuda a los que nos están ayudando</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum massa turpis, ultricies id lacinia et, posuere consectetur lorem. Nullam odio orci, egestas vitae quam non, blandit pretium turpis.</p>
-		<div class="box-option">
-			<a href="">
-				<h3>Hospedar <i class="icon-next"></i></h3>
-				<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span>
-			</a>
-			<a href="">
-				<h3>Buscar <br>Hospedaje <i class="icon-next"></i></h3>
-				<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span>
-			</a>
+	<div class="map-prueba">
+		<div class="container">
+			<div class="box-filter">
+				<h3>Filtrar alojamiento</h3>
+				<div class="filters">
+					<div class="f-bl">
+						<button class="active">Bogotá - Colina Campestre</button>
+					</div>
+					<div class="f-bl">
+						<button class="btn">Fechas</button>
+					</div>
+					<div class="f-bl">
+						<button class="btn">Tipo de espacio</button>
+					</div>
+					<div class="f-bl">
+						<label class="switch">
+							<input type="checkbox">
+							<span class="slider round"></span>
+						</label>
+						<label>Soy viajer@</label>
+					</div>
+					<div class="f-bl">
+						<label class="switch">
+							<input type="checkbox">
+							<span class="slider round"></span>
+						</label>
+						<label>Soy medic@s/enfermer@s</label>
+					</div>
+					<button type="button" class="btn btn-outline-primary">Filtrar</button>
+				</div>
+			</div>
 		</div>
-	</main>
-	<section class="sec-home white">
-		<article class="container art-home">
-			<div class="img-sec">
-				<img src="../content/images/img-funciona.png" alt="">
+		<div class="d-flex justify-content-center">
+			<div class="spinner-border" role="status">
+				<span class="sr-only">Loading...</span>
 			</div>
-			<div class="box-txt">
-				<h2 class="title">¿Cómo funciona?</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis quam interdum, iaculis velit in, gravida leo. Sed sed ante vitae quam fermentum vulputate non a tellus. Suspendisse id congue ipsum, vel rhoncus lacus. Praesent vitae turpis eleifend odio mattis placerat non nec turpis.</p>
-			</div>
-		</article>
-	</section>
-	<section class="sec-home">
-		<article class="container art-home">
-			<div class="img-sec">
-				<img src="../content/images/img-ayuda.png" alt="">
-			</div>
-			<div class="box-txt">
-				<h2 class="title">¿Cómo ayudar?</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis quam interdum, iaculis velit in, gravida leo. Sed sed ante vitae quam fermentum vulputate non a tellus. Suspendisse id congue ipsum, vel rhoncus lacus. Praesent vitae turpis eleifend odio mattis placerat non nec turpis.</p>
-			</div>
-		</article>
-	</section>
-	<footer> Copyright © 2020 by ayuda</footer>
+			<button class="btn btn-primary" type="button" disabled>
+				<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+				<span class="sr-only">Loading...</span>
+			</button>
+			<button class="btn btn-primary" type="button" disabled>
+				<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+				Loading...
+			</button>
+		</div>
+	</div>
 </body>

@@ -79,12 +79,51 @@ a{
     .nav-item{
         color: $gray2;
         font-weight: 400;
+
         .nav-link{
             color: $gray2;
+            position: relative;
+
+            .notifica{
+                position: absolute;
+                top: 0;
+                right: -10px;
+                background: $secundary;
+                @include circle(9px);
+            }
+        }
+    }
+    .nav-login{
+        margin: 0 0 0 10px;
+        text-align: right;
+        line-height: 100%;
+        font-size: rem(14px);
+        padding: 8px 0 0;
+
+        @include md{
+            text-align: left;
+            margin: 0;
+            padding: 8px;
+            font-size: rem(18px);
+            background: $third;
+            color: $secundary;
+        }
+
+        span{
+            display: block;
+            font-weight: 900;
+        }
+        a{
+            display: block;
+            color: $secundary;
+            font-weight: 400;
+            text-decoration: underline;
+            font-size: rem(12px);
         }
     }
     .navbar{
         padding: 0;
+        
     }
     .show > .nav-link,
     .active > .nav-link,
@@ -329,6 +368,140 @@ main{
     }
 }
 /*FIN HOME*/
+
+/*BUSCAR*/
+.map-prueba{
+    background: $third;
+    width: 100%;
+    height: calc(100% - 80px);
+    position: absolute;
+}
+.box-filter{
+    background: rgba($color: $white, $alpha: 0.9);
+    @include border-radius(8px);
+    margin: 30px 0;
+    box-sizing: border-box;
+    padding: 20px;
+    -webkit-box-shadow: 0px 4px 12px 0px rgba(0,116,203,0.23);
+    -moz-box-shadow: 0px 4px 12px 0px rgba(0,116,203,0.23);
+    box-shadow: 0px 4px 12px 0px rgba(0,116,203,0.23);
+
+    h3{
+        font-size: rem(18px);
+        font-weight: 900;
+        color: $gray;
+    }
+
+    .filters{
+        display: flex;
+        flex-direction: row;
+        
+        .f-bl{
+            padding: 4px 8px 4px 0;
+
+            label{
+                margin: rem(4px 0);
+                font-weight: 400;
+                color: $black;
+            }
+
+            button{
+                color: $gray2;
+                border: 1px solid $gray3;
+                font-weight: 400;
+                @include border-radius(20px);
+                box-sizing: border-box;
+                padding: rem(4px 12px);
+                
+                &.active{
+                    border: 2px solid $principal;
+                    color: $secundary;
+                    padding: rem(3px 12px);
+                    font-weight: 700;
+
+                }
+            }
+        }
+        .btn-outline-primary{
+            margin-left: auto!important;
+            padding: rem(8px 25px);
+            font-weight: 700;
+        }
+    }
+}
+
+/*SWITCH*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 25px;
+
+    input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    input:checked + .slider {
+        background-color: $principal;
+    }
+    
+    input:focus + .slider {
+        @include box-shadow(0 0 1px $principal);
+    }
+    
+    input:checked + .slider:before {
+        -webkit-transform: translateX(15px);
+        -ms-transform: translateX(15px);
+        transform: translateX(15px);
+    }
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $gray3;
+    -webkit-transition: .4s;
+    transition: .4s;
+
+    &:before {
+        position: absolute;
+        content: "";
+        height: 21px;
+        width: 21px;
+        left: 2px;
+        bottom: 2px;
+        background-color: $white;
+        @include box-shadow(1px 0 2px $gray);
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    /* Rounded sliders */
+    &.round {
+        @include border-radius(20px);
+
+        &:before {
+            border-radius: 50%;
+        }
+    }
+}
+/*SWITCH*/
+.btn-outline-primary{
+    color: $principal;
+    border: 2px solid $principal;
+    @include border-radius(8px);
+
+    &:hover{
+        background: $principal;
+        color: $white;
+        border: 2px solid $principal;
+    }
+}
+/*BUSCAR*/
 
 footer{
     background: $gray;
