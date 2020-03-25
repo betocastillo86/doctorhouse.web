@@ -79,18 +79,18 @@ a{
     .nav-item{
         color: $gray2;
         font-weight: 400;
+        position: relative;
 
         .nav-link{
             color: $gray2;
-            position: relative;
-
-            .notifica{
-                position: absolute;
-                top: 0;
-                right: -10px;
-                background: $secundary;
-                @include circle(9px);
-            }
+        }
+        .notifica{
+            position: absolute;
+            top: 5px;
+            right: 2px;
+            display: block;
+            background: $secundary;
+            @include circle(9px);
         }
     }
     .nav-login{
@@ -112,6 +112,7 @@ a{
         span{
             display: block;
             font-weight: 900;
+            color: $black;
         }
         a{
             display: block;
@@ -502,6 +503,138 @@ main{
     }
 }
 /*BUSCAR*/
+
+/*LOGIN REGISTRO*/
+.btn-back{
+    color: $secundary;
+    font-size: 20px;
+}
+.bd-login{
+    background: rgba(202,235,254,1);
+    background: -moz-linear-gradient(-45deg, rgba(202,235,254,1) 0%, rgba(161,214,255,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(202,235,254,1)), color-stop(100%, rgba(161,214,255,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(202,235,254,1) 0%, rgba(161,214,255,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(202,235,254,1) 0%, rgba(161,214,255,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(202,235,254,1) 0%, rgba(161,214,255,1) 100%);
+    background: linear-gradient(135deg, rgba(202,235,254,1) 0%, rgba(161,214,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#caebfe', endColorstr='#a1d6ff', GradientType=1 );
+}
+.login-box{
+    max-width: 420px;
+    margin: 0 auto;
+
+    .logo{
+        text-align: center;
+        color: $gray;
+        margin: 20px 0;
+
+        span{
+            display: block;
+            font-size: rem(32px);
+        }
+
+        .icon-log{
+            font-size: 60px;
+            color: $principal;
+        }
+    }
+    .tab-login{
+        text-align: center;
+
+        .btn{
+            color: $secundary;
+            background: rgba($color: $white, $alpha: 0.35);
+            border: none;
+            padding: rem(3px 10px);
+            @include border-radius(15px);
+            font-size: rem(18px);
+            position: relative;
+            margin: 0 20px;
+
+            @include iplus{
+                font-size: rem(16px);
+            }
+            @include i5{
+                font-size: rem(14px);
+            }
+
+            &.active{
+                font-weight: 900;
+                color: $white;
+                background: none;
+                font-size: rem(36px);
+                cursor: inherit;
+                padding: 0;
+                text-shadow: 0px 2px 6px rgba(43,155,239,0.5);
+
+                @include iplus{
+                    font-size: rem(24px);
+                }
+            }
+
+            &:first-child:after{
+                position: absolute;
+                content: '';
+                background: $secundary;
+                width: 3px;
+                @include border-radius(3px);
+                display: inline-flex;
+                height: 42px;
+                right: -20px;
+                top: 0;
+            }
+        }
+    }
+    .login-form{
+        margin: 0 0 40px;
+
+        label{
+            font-size: rem(18px);
+            font-weight: 700;
+            margin: 0 0 4px;
+            color: $gray2;
+        }
+
+        .form-control{
+            @include border-radius(8px);
+        }
+
+        .form-check{
+            margin: 0;
+        }
+
+        .btn{
+            width: 100%;
+            font-size: rem(18px);
+            @include border-radius(8px);
+            margin: 10px 0;
+            color: $secundary;
+            text-decoration: underline;
+            font-weight: 700;
+
+            &:hover{
+                color: $white;
+            }
+
+            span{
+                font-size: rem(12px);
+            }
+        }
+        .btn-primary{
+            background: $principal;
+            border-color: $principal;
+            font-size: rem(24px);
+            color: $white;
+            text-decoration: none;
+
+            &:hover{
+                background: $secundary;
+                border-color: $secundary;
+            }
+        }
+    }
+}
+/*FIN LOGIN REGISTRO*/
 
 footer{
     background: $gray;
